@@ -41,10 +41,10 @@ python /results/mosaics.py --big_image_path <big——real_Ki67_path> --small_im
 ```
 ## Result
 we conducted quantitative evaluations of the proposed model on endometrial cancer dataset collected from a local hospital and a publicly available breast cancer dataset. To demonstrate the superiority of our approach, we compared it with four state-of-the-art pathological image staining transfer methods, including [Cyclegan](https://github.com/aitorzip/PyTorch-CycleGAN), [PC-StainGAN](https://github.com/fightingkitty/PC-StainGAN), [Pyramid Pix2Pix](https://github.com/bupt-ai-cz/BCI), and [Adaptive Supervised PatchNCE](https://github.com/lifangda01/AdaptiveSupervisedPatchNCE). All networks were implemented in the same experimental environment, with identical training strategies, data augmentation techniques, and data preprocessing methods. The evaluation results of these methods on two dataset are listed in Table 1. Our model outperforms other models on all evaluation metrics in the endometrial cancer dataset. Compared to the second-ranked method, our model achieves average improvements of 0.83, 0.82, and 0.17 in SSIM, CCS, and PSNR, respectively. Our model has also achieved superior performance on the breast cancer dataset. Compared to the second-ranked method, our approach has shown average improvements of 0.39 and 0.43 in terms of SSIM and CCS, respectively. However, the PSNR is slightly lower than that of the second-ranked method.
-![picture3](https://github.com/YihaoMa0512/DSFF-GAN/blob/master/picture/picture5.png)
+![picture3](https://github.com/YihaoMa0512/DSFF-GAN/blob/master/picture/picture3.png)
  Visual comparison of generated Ki-67-stained image results using different methods on the endometrial cancer dataset.
-![picture4](https://github.com/YihaoMa0512/DSFF-GAN/blob/master/picture/picture3.png)
+![picture4](https://github.com/YihaoMa0512/DSFF-GAN/blob/master/picture/picture4.png)
  Visual comparison of generated Ki-67-stained image results using different methods on the breast cancer dataset.
-![picture5](https://github.com/YihaoMa0512/DSFF-GAN/blob/master/picture/picture4.png)
+![picture5](https://github.com/YihaoMa0512/DSFF-GAN/blob/master/picture/picture5.png)
 ## Acknowledgments
   Our code is based on [Cyclegan](https://github.com/aitorzip/PyTorch-CycleGAN)
