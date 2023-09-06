@@ -1,4 +1,4 @@
-# DSFFA-GAN
+# DSFF-GAN
 
 **A novel stain transfer network for generating immunohistochemical image of endometrial cancer**
 ***
