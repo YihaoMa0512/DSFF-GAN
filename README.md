@@ -49,5 +49,5 @@ we conducted quantitative evaluations of the proposed model on endometrial cance
 ## Acknowledgments
   Our code is based on [Cyclegan](https://github.com/aitorzip/PyTorch-CycleGAN)
  ##  Contact
- Yihao Ma(mayihao0512@163.com)
+ Yihao Ma(mayihao0512@163.com).
  If you have any questions, you can contact us directly.
