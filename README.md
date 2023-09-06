@@ -1,4 +1,4 @@
-# DSFF-GAN
+# DSFFA-GAN
 
 **A novel stain transfer network for generating immunohistochemical image of endometrial cancer**
 ***
@@ -48,3 +48,6 @@ we conducted quantitative evaluations of the proposed model on endometrial cance
 ![picture5](https://github.com/YihaoMa0512/DSFF-GAN/blob/master/picture/picture5.png)
 ## Acknowledgments
   Our code is based on [Cyclegan](https://github.com/aitorzip/PyTorch-CycleGAN)
+ ##  Contact
+ Yihao Ma(mayihao0512@163.com)
+ If you have any questions, you can contact us directly.
