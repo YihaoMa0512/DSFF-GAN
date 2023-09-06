@@ -35,7 +35,7 @@ python /train/test.py --model_path <path_for_saving_the_models> --input_dir <HE_
 ```
 python /construction_sim/A_rA_Similarity.py --real_path <real_Ki67_path> --fake_path <fake_Ki67_path> 
 ```
-### mosaics
+### Mosaics
 ```
 python /results/mosaics.py --big_image_path <big——real_Ki67_path> --small_image_path<small_fake_Ki67_path> 
 ```
