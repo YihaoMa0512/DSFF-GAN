@@ -14,7 +14,7 @@ from utils import ReplayBuffer_D
 from utils import LambdaLR
 from utils import Logger, ReplayBuffer
 from utils import weights_init_normal
-from utils import MS_SSIM_Loss,delta_e_loss
+from utils import MS_SSIM_Loss,delta_e_loss_xyz
 from datasets import ImageDataset_label, ImageDataset
 
 # breast/ neuroendocrine / GLAS
