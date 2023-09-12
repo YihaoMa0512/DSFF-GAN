@@ -200,7 +200,7 @@ if __name__ == '__main__':
             loss_class_pathology_ABA = criterion_GAN(c_ra, c_fb)
             loss_cycle_ABA = criterion_cycle(recovered_A, real_A)
             loss_cycle_ssimABA = criterion_ssim(recovered_A, real_A)
-            loss_cycle_colorABA = delta_e_loss(recovered_A, real_A)
+            loss_cycle_colorABA = delta_e_loss_xyz(recovered_A, real_A)
 
 
             recovered_B, features_lrb, c_rb = netG_A2B(fake_A)
@@ -209,7 +209,7 @@ if __name__ == '__main__':
             loss_class_pathology_BAB = criterion_GAN(c_rb, c_fa)
             loss_cycle_BAB = criterion_cycle(recovered_B, real_B)
             loss_cycle_ssimBAB = criterion_ssim(recovered_B, real_B)
-            loss_cycle_colorBAB = delta_e_loss(recovered_B, real_B)
+            loss_cycle_colorBAB = delta_e_loss_xyz(recovered_B, real_B)
 
             # Total loss
             loss_G = 5.0 * loss_C +\
