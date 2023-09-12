@@ -166,24 +166,24 @@ def delta_e_loss(y_pred, y_true,n=2):
     return delta_E.mean()*n
 def delta_e_loss_xyz(y_pred, y_true):
     # 计算△L*
-    L_pred = 0.412 * y_pred[:, 0, :, :] + 0.358 * y_pred[:, 1, :, :] + 0.180 * y_pred[:, 2, :, :]
-    L_true = 0.412 * y_true[:, 0, :, :] + 0.358 * y_true[:, 1, :, :] + 0.180 * y_true[:, 2, :, :]
-    delta_L = L_pred - L_true
+    X_pred = 0.49 * y_pred[:, 0, :, :] + 0.31 * y_pred[:, 1, :, :] + 0.20 * y_pred[:, 2, :, :]
+    X_true = 0.49 * y_true[:, 0, :, :] + 0.31 * y_true[:, 1, :, :] +0.20 * y_true[:, 2, :, :]
+    delta_X = (1/0.17697)*(X_pred - X_true)
 
     # 计算△a*和△b*
-    a_pred = 0.213 * y_pred[:, 0, :, :] + 0.712 * y_pred[:, 1, :, :] + 0.072 * y_pred[:, 2, :, :]
-    a_true = 0.213 * y_true[:, 0, :, :] + 0.712 * y_true[:, 1, :, :] + 0.072 * y_true[:, 2, :, :]
-    delta_a = a_pred - a_true
+    Y_pred = 0.17697 * y_pred[:, 0, :, :] + 0.81240 * y_pred[:, 1, :, :] + 0.01063 * y_pred[:, 2, :, :]
+    Y_true = 0.17697 * y_true[:, 0, :, :] + 0.81240 * y_true[:, 1, :, :] + 0.01063 * y_true[:, 2, :, :]
+    delta_Y = (1/0.17697)*(Y_pred - Y_true)
 
-    b_pred = 0.019 * y_pred[:, 0, :, :] + 0.119 * y_pred[:, 1, :, :] + 0.950 * y_pred[:, 2, :, :]
-    b_true = 0.019 * y_true[:, 0, :, :] + 0.119 * y_true[:, 1, :, :] + 0.950 * y_true[:, 2, :, :]
-    delta_b = b_pred - b_true
+    Z_pred = 0.00 * y_pred[:, 0, :, :] + 0.01 * y_pred[:, 1, :, :] + 0.99 * y_pred[:, 2, :, :]
+    Z_true = 0.00 * y_true[:, 0, :, :] + 0.01 * y_true[:, 1, :, :] + 0.99 * y_true[:, 2, :, :]
+    delta_Z = (1/0.17697)*(Z_pred - Z_true)
 
     # 计算△E*
-    delta_E = torch.sqrt(delta_L ** 2 + delta_a ** 2 + delta_b ** 2+1e-8)
+    delta_E = torch.sqrt(delta_X ** 2 + delta_Y ** 2 + delta_Z ** 2+1e-8)
 
     # 对 batch 维求平均，作为最终的 loss
-    return delta_E.mean()
+    return 0.4*delta_E.mean()
 class ReplayBuffer_D():
     def __init__(self, max_size=50):
         assert (max_size > 0), 'Empty buffer or trying to create a black hole. Be careful.'
